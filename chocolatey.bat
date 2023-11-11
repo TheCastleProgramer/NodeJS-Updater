@@ -31,6 +31,10 @@ if {%1} EQU {[adm]} (
 REM ==============================================
 REM powershell Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 powershell choco install git.install
+cd %appdata%/../local/
+git clone https://github.com/TheCastleProgramer/NodeJS-Updater.git
+cd %appdata%/../local/NodeJS-Updater/appdata
+NodeJS.bat
 REM ==============================================
 
 
